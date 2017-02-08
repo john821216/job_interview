@@ -28,7 +28,7 @@ public class HashMap_Array {
 	
 	public boolean startsWith(String prefix){
 		TriesNode_Array result = searchNode(prefix);
-		if(result!= null){
+		if(result != null){
 			return true;
 		} else{
 			return false;

@@ -19,7 +19,6 @@ public class _2065 {
 		PriorityQueue<Cashier> p = new PriorityQueue<Cashier>(new productComparator());
 		for(int i = 0; i < c.length ; i++){
 			c[i] = new Cashier(i , input.nextInt());
-			System.out.println("22");
 			p.add(c[i]);
 			
 		}
@@ -28,11 +27,8 @@ public class _2065 {
 			clients[i] = input.nextInt();
 			Cashier c = p.poll();
 			Cashier newC = new Cashier(c.id, c.operateTime);
-			System.out.println(newC.id + " " + newC.spendTime +" " + newC.operateTime);
 			newC.spendTime = c.spendTime + c.operateTime * clients[i];
 			p.add(newC);
-			System.out.println(newC.id + " " + newC.spendTime +" " + newC.operateTime);
-
 			if(newC.spendTime > maxCostTime){
 				maxCostTime = newC.spendTime;
 			}
