@@ -18,7 +18,7 @@ public class _1706 {
 		}
 		while (input.hasNext()) {
 			line = input.nextLine();
-			System.out.println("21 " + line);
+//			System.out.println("21 " + line);
 			while (isBlank(line)) {
 				line = input.nextLine();
 
@@ -32,7 +32,7 @@ public class _1706 {
 					j++;
 				}
 				int iNumber = Integer.parseInt(number);
-				System.out.println("34 " +iNumber);
+//				System.out.println("34 " +iNumber);
 
 				r[iNumber].desc += line;
 				r[iNumber].desc += "\n";
