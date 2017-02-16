@@ -51,9 +51,9 @@ public class _2379 {
 		
 		for(int i = 0 ; i < C ; i++){
 			if(i==0){
-				System.out.println(t[i].index);
+				System.out.print(t[i].index);
 			} else{
-				System.out.println(" " + t[i].index);
+				System.out.print(" " + t[i].index);
 			}
 		}
 
