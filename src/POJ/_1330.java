@@ -52,7 +52,6 @@ public class _1330 {
 			findDepth(0, rootIndex);
 
 			while (X != Y) {
-				System.out.println(X +" " + Y +" " + d[X] +" " + d[Y]);
 				if (d[X] > d[Y]) {
 					X = f[X];
 				} else {
