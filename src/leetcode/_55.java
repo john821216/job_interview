@@ -1,0 +1,18 @@
+package leetcode;
+
+public class _55 {
+	public boolean canJump(int[] nums) {
+		int maxIndex = 0;
+		for (int i = 0; i < nums.length - 1; i++) {
+			if (i <= maxIndex) {
+				if (i + nums[i] > maxIndex) {
+					maxIndex = i + nums[i];
+				}
+			}
+		}
+		if (maxIndex >= nums.length - 1)
+			return true;
+		else
+			return false;
+	}
+}
