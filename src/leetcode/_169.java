@@ -7,17 +7,20 @@ import java.util.Map;
 public class _169{
 	// 1 2 3 1 1
 	//http://www.cs.utexas.edu/~moore/best-ideas/mjrty/example.html#step06
+	//http://www.geeksforgeeks.org/majority-element/
+	//time complexity O(logn) which n is number
     public int majorityElement(int[] nums) {
         int an = nums[0];
         int count = 1;
         for(int i = 1 ; i < nums.length ; i++){
-        		if(count == 0){
-        			count++;
-        			an = nums[i];
-        		} else if (nums[i] != an){
+        		if (nums[i] != an){
         			count--;
         		} else{
         			count++;
+        		}
+        		if(count == 0){
+        			an = nums[i];
+        			count = 1;
         		}
         }
         return an;
