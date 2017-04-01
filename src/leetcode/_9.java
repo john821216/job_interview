@@ -7,7 +7,7 @@ public class _9 {
 	 }
 	 
 	 public void execute(){
-		 System.out.println(isPalindrome(132));
+		 System.out.println(isPalindrome(1463847433));
 	 }
 	
 	 public boolean isPalindrome(int x) {
@@ -21,5 +21,17 @@ public class _9 {
 			 y /= 10;
 		 }
 		 return (x == cur);
+	 }
+	 
+	 public boolean isPalindrome2(int x){
+		 if( x < 0 || ( x != 0 && x % 10 == 0)){
+			 return false;
+		 }
+		 int y = 0;
+		 while(x > y){
+			 y = y * 10 + x % 10;
+			 x /= 10;
+		 }		 
+		 return (x == y || x == y / 10);
 	 }
 }

@@ -19,13 +19,29 @@ public class _78 {
 		for(int i = 0 ; i < (1 << nums.length) ; i++){
 			List<Integer> curL = new ArrayList<Integer>();
 			
+			//first way
+			/*
 			int number = 0;
+			
 			for(int j = 0 ; j < nums.length ; j++ ){
 				if( (i & (1 << number))  > 0){
 					curL.add(nums[j]);
 				}
 				number++;
+			}*/
+			
+			//another way
+			int index = 0;
+			int j = i;
+			while( j > 0){
+				if( (j & 1) > 0){
+					curL.add(nums[index]);
+					System.out.print(nums[index] +" ");
+				}
+				index++;
+				j = j>>1;
 			}
+			System.out.println();
 			ll.add(curL);
 		}
 		return ll;

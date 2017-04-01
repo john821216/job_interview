@@ -1,5 +1,5 @@
 public class FindSum_DFS {
-	static int[] arr = { 1, 2, 4, 7 };
+	static int[] arr = { 1, 3, 4, 7 };
 	static int target = 15;
 
 	public static void main(String[] args) {
@@ -7,7 +7,7 @@ public class FindSum_DFS {
 	}
 
 	public static void findSum(int sum, int startIndex, int[] arr, int count) {
-		System.out.println(sum + " " + count);
+		System.out.println(sum);
 		if (sum == target) {
 			System.out.println("YES");
 		} else {

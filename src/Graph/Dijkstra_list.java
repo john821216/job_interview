@@ -76,7 +76,7 @@ public class Dijkstra_list {
 
 	public void di() {
 		v = new Vertex[V];
-		p = new TreeSet<>(new VertexComparator());
+		p = new TreeSet<Vertex>(new VertexComparator());
 		for (int i = 0; i < v.length; i++) {
 			v[i] = new Vertex();
 			v[i].index = i;
