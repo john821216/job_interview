@@ -19,13 +19,13 @@ public class _15 {
 		Arrays.sort(nums);
 		List<List<Integer>> ll = new ArrayList<List<Integer>>();
 		for (int i = 0; i < nums.length - 2; i++) {
-			int curSum = nums[i];
+			int curIndex = nums[i];
 			int start = i + 1;
 			int end = nums.length - 1;
 			while (start < end) {
 				// important here
 				if (i == 0 || (i > 0 && nums[i] != nums[i - 1])) {
-					if (nums[start] + nums[end] + curSum == 0) {
+					if (nums[start] + nums[end] + curIndex == 0) {
 						List<Integer> l = new ArrayList<Integer>();
 						l.add(nums[start]);
 						l.add(nums[end]);
@@ -36,7 +36,7 @@ public class _15 {
 						while(end >= 0 && endVal == nums[end] ){
 							end--;
 						}
-					} else if (nums[start] + nums[end] + curSum < 0) {
+					} else if (nums[start] + nums[end] + curIndex < 0) {
 						start++;
 					} else {
 						end--;

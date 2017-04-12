@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.NavigableSet;
 import java.util.TreeSet;
-
+//http://www.programcreek.com/2013/03/hashset-vs-treeset-vs-linkedhashset/
 public class Dijkstra_list {
 	LinkedList<Pair>[] adjacencyList;
 	NavigableSet<Vertex> p;
@@ -134,5 +134,4 @@ class Pair {
 		this.endVertex = endVertex;
 		this.weight = weight;
 	}
-
 }
