@@ -1,4 +1,4 @@
-package leetcode;
+package Leetcode;
 
 public class _371 {
 	//https://leetcode.com/problems/sum-of-two-integers/#/solutions

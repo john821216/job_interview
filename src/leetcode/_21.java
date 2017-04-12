@@ -1,4 +1,4 @@
-package leetcode;
+package Leetcode;
 
 public class _21 {
 	public ListNode mergeTwoLists(ListNode l1, ListNode l2) {

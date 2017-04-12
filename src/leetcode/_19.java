@@ -1,4 +1,4 @@
-package leetcode;
+package Leetcode;
 
 public class _19 {
 	public ListNode removeNthFromEnd(ListNode head, int n) {

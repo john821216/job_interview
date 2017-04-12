@@ -1,4 +1,4 @@
-package leetcode;
+package Leetcode;
 
 public class _278 {
     public int firstBadVersion(int n) {

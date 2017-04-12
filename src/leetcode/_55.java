@@ -1,4 +1,4 @@
-package leetcode;
+package Leetcode;
 
 public class _55 {
 	public boolean canJump(int[] nums) {

@@ -1,4 +1,4 @@
-package leetcode;
+package Leetcode;
 //http://math.stackexchange.com/questions/113270/the-median-minimizes-the-sum-of-absolute-deviations
 public class _462 {
 	

@@ -1,4 +1,4 @@
-package leetcode;
+package Leetcode;
 
 public class _31 {
     public void nextPermutation(int[] nums) {

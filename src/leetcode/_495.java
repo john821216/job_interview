@@ -1,4 +1,4 @@
-package leetcode;
+package Leetcode;
 
 public class _495 {
 	int[] arr = {1,4};

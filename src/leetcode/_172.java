@@ -1,4 +1,4 @@
-package leetcode;
+package Leetcode;
 
 public class _172 {
 	public int trailingZeroes(int n) {

@@ -1,4 +1,4 @@
-package leetcode;
+package Leetcode;
 
 public class _357 {
     public int countNumbersWithUniqueDigits(int n) {

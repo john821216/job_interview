@@ -1,4 +1,4 @@
-package careerCup;
+package CareerCup;
 
 //https://www.careercup.com/question?id=5185036367167488
 public class _a1 {

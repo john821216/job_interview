@@ -1,4 +1,4 @@
-package leetcode;
+package Leetcode;
 
 public class _83 {
 	public ListNode deleteDuplicates(ListNode head) {

@@ -1,4 +1,4 @@
-package leetcode;
+package Leetcode;
 
 public class _450 {
 	public TreeNode deleteNode(TreeNode root, int key) {

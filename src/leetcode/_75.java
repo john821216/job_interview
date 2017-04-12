@@ -1,4 +1,4 @@
-package leetcode;
+package Leetcode;
 
 public class _75 {
 	//http://algs4.cs.princeton.edu/lectures/23DemoPartitioning.pdf

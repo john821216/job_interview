@@ -1,4 +1,4 @@
-package leetcode;
+package Leetcode;
 
 public class _35 {
 	public int searchInsert(int[] nums, int target) {

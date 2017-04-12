@@ -1,4 +1,4 @@
-package leetcode;
+package Leetcode;
 
 public class _141 {
 	public boolean hasCycle(ListNode head) {

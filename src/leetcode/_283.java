@@ -1,4 +1,4 @@
-package leetcode;
+package Leetcode;
 
 public class _283 {
 	public void moveZeroes(int[] nums) {

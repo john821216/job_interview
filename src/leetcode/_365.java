@@ -1,4 +1,4 @@
-package leetcode;
+package Leetcode;
 
 public class _365 {
 	// https://www.slideshare.net/amrinderarora/euclids-algorithm-for-greatest-common-divisor

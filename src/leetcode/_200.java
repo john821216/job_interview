@@ -1,4 +1,4 @@
-package leetcode;
+package Leetcode;
 
 public class _200 {
     public int numIslands(char[][] grid) {

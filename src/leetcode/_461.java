@@ -1,4 +1,4 @@
-package leetcode;
+package Leetcode;
 
 public class _461 {
 	public static void main(String[] args){

@@ -1,4 +1,4 @@
-package bfs;
+package Bfs;
 
 import java.util.Scanner;
 

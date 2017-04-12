@@ -1,4 +1,4 @@
-package codeForce;
+package CodeForce;
 
 import java.util.LinkedList;
 import java.util.Queue;
