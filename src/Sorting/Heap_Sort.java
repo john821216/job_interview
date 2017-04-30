@@ -31,6 +31,7 @@ public class Heap_Sort {
 		}
 	}
 
+	//O(N)
 	public static void buildHeap(int[] nums) {
 		for (int i = nums.length / 2; i >= 0; i--) {
 			maxHeapify(nums, nums.length - 1, i);

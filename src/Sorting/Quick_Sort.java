@@ -4,7 +4,7 @@ public class Quick_Sort {
 	public static void main(String[] args) {
 		Quick_Sort q = new Quick_Sort();
 		int[] arr = { -8,-8, 2, -5, 10, 1, 2 };
-		q.hoarePartition(arr, 0, arr.length - 1);
+		q.partition(arr, 0, arr.length - 1);
 		q.print(arr);
 	}
 

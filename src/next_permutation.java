@@ -2,7 +2,7 @@
 public class next_permutation {
 	//https://www.nayuki.io/page/next-lexicographical-permutation-algorithm
 	//leetcode_31
-	int[] arr = {0,1,2,5,3,3,0};
+	int[] arr = {0,1,2,5,4,3,0};
 	public static void main(String[] args){
 		next_permutation n = new next_permutation();
 		n.next_per();
@@ -20,7 +20,7 @@ public class next_permutation {
 		} else{
 			pivot--;
 		}		
-		
+		System.out.println(pivot);
 		//find the rightmost ele which is bigger than pivot
 		int rightMostBiggerEleIndex = arr.length - 1;
 		if(arr[pivot] >= arr[rightMostBiggerEleIndex]){

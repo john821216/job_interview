@@ -1,10 +1,10 @@
 package Sorting;
 
-public class insertion_sort {
+public class InsertionSort {
 	int[] arr = { 8, 7, 6, 5, 2, -4, 3, 1 };
 
 	public static void main(String[] args) {
-		new insertion_sort().execute();
+		new InsertionSort().execute();
 	}
 
 	public void execute(){

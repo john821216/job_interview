@@ -9,7 +9,9 @@ public class permutation {
 			int temp = arr[start];
 			arr[start] = arr[i];
 			arr[i] = temp;
+			
 			per(arr, start + 1, end);
+			
 			temp = arr[start];
 			arr[start] = arr[i];
 			arr[i] = temp;
