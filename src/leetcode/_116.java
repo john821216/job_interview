@@ -28,6 +28,21 @@ public class _116 {
 			num *= 2;
 		}
 	}
+	
+	public void connect2(TreeLinkNode root) {
+        if(root == null) return;
+		while(root.left != null){
+			TreeLinkNode curNode = root;
+			while(curNode != null){
+    		    curNode.left.next = curNode.right;
+    			if(curNode.next != null){
+    				curNode.right.next = curNode.next.left;
+    			}
+    			curNode = curNode.next;
+			}
+			root = root.left;
+		}
+	}
 
 	// Definition for binary tree with next pointer.
 	private class TreeLinkNode {

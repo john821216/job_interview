@@ -15,4 +15,26 @@ public class _98 {
 		return isValidBSTHelper(n.left, min, n.val)
 				&& isValidBSTHelper(n.right, n.val, max);
 	}
+
+	TreeNode min = null;
+
+	public boolean isValidBST2(TreeNode root) {
+		boolean ok = true;
+		if (root == null) return true;
+		if (root.left != null) ok &= isValidBST2(root.left);
+			
+
+		if (min == null) {
+			min = root;
+		} else {
+			if (min.val >= root.val) {
+				return false;
+			} else {
+				min = root;
+			}
+		}
+
+		if (root.right != null) ok &= isValidBST2(root.right);
+		return ok;
+	}
 }
