@@ -7,7 +7,7 @@ public class _324 {
 	}
 
 	public void execute() {
-		int[] arr = { 1 ,5, 1, 1, 6,4};
+		int[] arr = { 1 ,5,  1, 6};
 		wiggleSort(arr);
 	}
 
@@ -37,10 +37,10 @@ public class _324 {
 			}
 		}
 
-//		for (int a : nums) {
-//			System.out.print(a + " ");
-//		}
-//		System.out.println();
+		for (int a : nums) {
+			System.out.print(a + " ");
+		}
+		System.out.println();
 //		System.out.println(lo + " " + high + " " + kthVal);
 
 		// http://www.cnblogs.com/qiaoconglovelife/p/5940223.html
@@ -63,7 +63,7 @@ public class _324 {
 		}
 		for (int ia = 0; ia < nums.length; ia++) {
 			an[index] = nums[ia];
-			System.out.println(index +" " +an[index] + " " +ia);
+//			System.out.println(index +" " +an[index] + " " +ia);
 			index -=2;
 			if(index < 0){
 				if(nums.length % 2 == 1){
@@ -77,11 +77,11 @@ public class _324 {
 		for (int a = 0; a < an.length; a++) {
 			nums[a] = an[a];
 		}
-//
-//		for (int a : an) {
-//			System.out.print(a + " ");
-//		}
-//		System.out.println();
+
+		for (int a : an) {
+			System.out.print(a + " ");
+		}
+		System.out.println();
 	}
 
 	public int kthElement(int[] nums, int start, int end, int k) {

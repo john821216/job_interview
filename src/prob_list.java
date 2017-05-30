@@ -13,4 +13,6 @@ public class prob_list {
 	//unsolved career cup
 	//http://www.1point3acres.com/bbs/thread-142376-1-1.html
 	//project euler #14
+	
+	http://www.geeksforgeeks.org/union-find/
 }

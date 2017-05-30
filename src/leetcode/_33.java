@@ -38,6 +38,7 @@ public class _33 {
 	}
 
 	public int search2(int[] nums, int target) {
+        if(nums.length ==0) return -1;
 		int low = 0;
 		int high = nums.length - 1;
 		while (low <= high) {
@@ -56,8 +57,14 @@ public class _33 {
 				} else {
 					high = mid - 1;
 				}
+			} else{
+				return -1;
 			}
 		}
-		return low;
+		if(nums[low] == target){
+			return low;
+		} else{
+			return -1;
+		}
 	}
 }

@@ -62,7 +62,7 @@ public class _332 {
 		}
 
 		ArrayList<String> p = h.get(s);
-		if (count != 0 && (p == null)) {
+		if (p == null) {
 			return null;
 		}
 		for (int i = 0; i < p.size(); i++) {
