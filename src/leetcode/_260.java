@@ -1,6 +1,12 @@
 package Leetcode;
 
 public class _260 {
+	
+	public static void main(String[] args){
+		_260 a = new _260();
+		System.out.println(14&-14);
+	}
+
     public int[] singleNumber(int[] nums) {
     		int diff = 0;
     		for(int i = 0 ; i < nums.length; i++){

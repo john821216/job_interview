@@ -9,7 +9,7 @@ public class _581 {
 	}
 
 	public void execute() {
-		int[] arr = { 2, 6, 4, 8, 10, 9, 15 };
+		int[] arr = { 2, 6, 4, 8, 9, 10, 15 };
 		for (int i : arr) {
 			System.out.print(i + " ");
 		}
@@ -44,7 +44,9 @@ public class _581 {
 			} else if (nums[i] > nums[cur]) {
 				cur = i;
 			}
+			System.out.println(cur +" " +end);
 		}
+		System.out.println(nums[end] +" " + nums[cur]);
 
 		cur = nums.length - 1;
 		for (int i = nums.length - 2; i >= 0; i--) {

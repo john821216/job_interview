@@ -10,7 +10,7 @@ public class _136 {
 
 	public void execute() {
 		int[] arr = { 1, 2, 2, 4, 5, 1, 5 };
-		System.out.println(singleNumber(arr));
+		System.out.println(singleNumber2(arr));
 	}
 
 	// A^(B^C) = (A^B)^C
@@ -18,6 +18,14 @@ public class _136 {
 		int x = 0;
 		for (int a : A) {
 			x = x ^ a;
+		}
+		return x;
+	}
+
+	public int singleNumber2(int[] A) {
+		int x = 0;
+		for (int a : A) {
+			x = (~x & a) | (x & ~a);
 		}
 		return x;
 	}
