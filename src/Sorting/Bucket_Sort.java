@@ -29,6 +29,7 @@ public class Bucket_Sort {
 
 		for (int i = 0; i < n + 1; i++) {
 			Collections.sort(aa.get(i));
+			System.out.println(aa.get(i));
 		}
 
 		int count = 0;
