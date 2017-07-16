@@ -12,24 +12,18 @@ public class _459 {
 	}
 
 	public boolean repeatedSubstringPattern(String s) {
-		int[] count = new int[26];
-		for (char c : s.toCharArray()) {
-			count[c - 'a']++;
+		for (int i = 1; i <= s.length() / 2; i++) {
+			if (s.length() % i == 0) {
+				String subs = s.substring(0, i);
+				StringBuilder sb = new StringBuilder();
+				for(int j = 0 ; j < s.length()/i ; j++){
+					sb.append(subs);
+				}
+				if(sb.toString().equals(s)){
+					return true;
+				}
+			}
 		}
-		int cur = gcd(count[0], count[1]);
-		for (int i = 2; i < 26; i++) {
-			cur = gcd(cur, count[i]);
-		}
-		return cur != 1;
-	}
-
-	public int gcd(int a, int b) {
-		while (b != 0) {
-			a = a % b;
-			int temp = a;
-			a = b;
-			b = temp;
-		}
-		return a;
+		return false;
 	}
 }
