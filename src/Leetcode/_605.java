@@ -1,6 +1,6 @@
 package Leetcode;
 
-public class _606 {
+public class _605 {
 	public boolean canPlaceFlowers(int[] flowerbed, int n) {
 		for (int i = 0; i < flowerbed.length; i++) {
 			boolean cur = false;

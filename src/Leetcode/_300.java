@@ -10,7 +10,7 @@ public class _300 {
 
 	public void execute() {
 		int[] arr = { -4, -1, 6, 3 };
-		lengthOfLIS2(arr);
+		System.out.println(lengthOfLIS2(arr));
 	}
 
 	public int lengthOfLIS(int[] nums) {
@@ -34,31 +34,25 @@ public class _300 {
 	}
 
 	public int lengthOfLIS2(int[] nums) {
-		int[] tails = new int[nums.length];
-		tails[0] = nums[0];
-		int s = 0;
-		int e = 0;
-		int curEnd = 0;
-		for (int i = 1; i < nums.length; i++) {
-			while (s != e) {
-				int m = (e - s) / 2 + e;
-				if (tails[m] < nums[i]) {
-					s = m + 1;
+		int size = 0;
+		int[] tail = new int[nums.length + 1];
+		for (int i = 0; i < nums.length; i++) {
+			int from = 0;
+			int end = size;
+			while (from < end) {
+				int mid = (end - from) / 2 + from;
+				if (nums[i] > tail[mid]) {
+					from = mid + 1;
 				} else {
-					e = m;
+					end = mid;
 				}
 			}
-
-			if (s > curEnd) {
-				e = curEnd + 1;
-				tails[e] = nums[i];
-			} else {
-				e = curEnd;
-				
+			tail[from] = nums[i];
+			if (from == size) {
+				size++;
 			}
-			s = 0;
 		}
-
+		return size;
 	}
 
 }
