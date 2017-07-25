@@ -1,5 +1,7 @@
 package Leetcode;
 
+import java.util.Arrays;
+
 public class _628 {
 	public int maximumProduct(int[] nums) {
 		Arrays.sort(nums);

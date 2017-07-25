@@ -9,7 +9,7 @@ public class _467 {
 	}
 
 	public void execute() {
-		System.out.println(findSubstringInWraproundString("zab"));
+		System.out.println(findSubstringInWraproundString2("zaba"));
 	}
 
 	public int findSubstringInWraproundString(String p) {
@@ -38,5 +38,24 @@ public class _467 {
 			}
 		}
 		return true;
+	}
+
+	public int findSubstringInWraproundString2(String p) {
+		int[] count = new int[26];
+		int len = 0;
+		for (int i = 0; i < p.length(); i++) {
+			if (i > 0 && (p.charAt(i) - p.charAt(i - 1) == 1 || p.charAt(i) - p.charAt(i - 1) == -25)) {
+				len++;
+			} else {
+				len = 1;
+			}
+			count[p.charAt(i) - 'a'] = Math.max(count[p.charAt(i) - 'a'], len);
+		}
+		int maxCount = 0;
+		for (int i = 0; i < 26; i++) {
+			maxCount += count[i];
+		}
+		return maxCount;
+
 	}
 }
