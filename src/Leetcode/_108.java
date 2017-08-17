@@ -8,7 +8,7 @@ public class _108 {
 	
 	public void execute(){
 		int[] ar = {1,2,3,4,5};
-		sortedArrayToBST(ar);
+		sortedArrayToBST(new int[] {1,2,3,4,5});
 		
 	}
 	
