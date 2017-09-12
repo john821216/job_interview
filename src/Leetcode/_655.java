@@ -42,7 +42,7 @@ public class _655 {
 		}
 		int pos = (start + to) / 2;
 		ll.get(curHeight).set(pos, cur.val+"");
-		print(cur.left, ll, 0, pos - 1, curHeight + 1);
+		print(cur.left, ll, start, pos - 1, curHeight + 1);
 		print(cur.right, ll, pos + 1, to, curHeight + 1);
 	}
 

@@ -1,56 +1,98 @@
 package Leetcode;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
-/**
- * Definition for a binary tree node. 
- * public class TreeNode { int val; TreeNode
- * left; TreeNode right; TreeNode(int x) { val = x; } }
- */
 public class _267 {
-	public static void main(String[] args){
+	public static void main(String[] args) {
 		_267 a = new _267();
 		a.execute();
 	}
-	
-	public void execute(){
-		TreeNode r = new TreeNode(1);
-		r.left = new TreeNode(2);
-		r.right = new TreeNode(5);
-		r.left.left = new TreeNode(3);
-		r.left.right= new TreeNode(8);
-		r.left.right.left = new TreeNode(10);
-		List<String> l = binaryTreePaths(r);
-		
-		for(int i = 0; i < l.size() ; i++){
-			System.out.print(l.get(i) +" ");
+
+	public void execute() {
+		System.out.println(generatePalindromes("aaaabbbb"));
+	}
+
+	public List<String> generatePalindromes(String s) {
+		HashMap<Integer, Integer> h = new HashMap<Integer, Integer>();
+		for (char c : s.toCharArray()) {
+			int idx = c - 'a';
+			if (!h.containsKey(idx)) {
+				h.put(idx, 1);
+			} else {
+				h.put(idx, h.get(idx) + 1);
+			}
+		}
+		int oddCount = 0;
+		String oddVal = "";
+		StringBuilder rest = new StringBuilder();
+		List<String> an = new ArrayList<String>();
+		for (int i : h.keySet()) {
+			if (h.get(i) % 2 == 1) {
+				oddCount++;
+				oddVal = (char) (i + 'a') + "";
+			}
+			for (int j = 0; j < h.get(i) / 2; j++) {
+				rest.append((char) (i + 'a'));
+			}
 		}
 		
-		System.out.println();
 		
+		if (s.length() % 2 == 1) {	
+			if (oddCount != 1) {
+				return an;
+			} else {
+				permutation(an, rest.toString(), oddVal);
+			}
+		} else {
+			if (oddCount > 0) {
+				return an;
+			} else {
+				permutation(an, rest.toString(), oddVal);
+
+			}
+		}
+		return an;
 	}
-	
-    public List<String> binaryTreePaths(TreeNode root) {
-    		List<String> l = new ArrayList<String>();
-    		if(root == null){
-    			return l;
-    		}
-        findPath(l, 	root.val+"" , root);
-        return l;
-    }
-    
-    public void findPath(List<String> l, String s, TreeNode n){
-    		if(n.right == null && n.left == null){
-    			l.add(s);
-    		}
-    		
-    		if(n.left != null){
-    			findPath(l , s+"->"+n.left.val, n.left);
-    		}
-    		
-    		if(n.right !=null){
-    			findPath(l ,  s+"->"+n.right.val, n.right);
-    		}		
-    }
+
+	public void permutation(List<String> l, String curS, String oddVal) {
+		HashSet<String> appear;
+		Queue<String> q = new LinkedList<String>();
+		StringBuilder sb;
+		q.add(curS);
+		int lv = 0;
+		while (!q.isEmpty()) {
+			if(lv== curS.length()) {
+				while(!q.isEmpty()) {
+					String pop = q.poll();
+					l.add(pop + oddVal + new StringBuilder(pop).reverse().toString());					
+				}		
+				break;
+			}
+			
+			int size = q.size();
+			appear = new HashSet<String>();
+			for (int s = 0; s < size; s++) {		
+				String poll = q.poll();
+				sb = new StringBuilder(poll);
+				for (int i = lv; i < sb.length(); i++) {
+					char temp = sb.charAt(i);
+					sb.setCharAt(i, sb.charAt(lv));
+					sb.setCharAt(lv, temp);
+					
+					if (!appear.contains(sb.toString())) {
+						appear.add(sb.toString());
+						q.add(sb.toString());
+					}
+					sb = new StringBuilder(poll);
+				}
+				System.out.println(q);
+			}
+			lv++;
+		}
+	}
 }

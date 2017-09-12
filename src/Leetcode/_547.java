@@ -46,13 +46,13 @@ public class _547 {
 		for (int i = 0; i < M.length; i++) {
 			for (int j = i + 1; j < M.length; j++) {
 				if (M[i][j] == 1) {
-					if(connected(parent,size,i,j)){
+					if (connected(parent, size, i, j)) {
 						count--;
 					}
 				}
 			}
 		}
-		
+
 		return count;
 
 	}
@@ -60,7 +60,8 @@ public class _547 {
 	public boolean connected(int[] parent, int[] size, int p, int q) {
 		int pParent = find(parent, p);
 		int qParent = find(parent, q);
-		if(pParent == qParent) return false;
+		if (pParent == qParent)
+			return false;
 		if (size[pParent] < size[qParent]) {
 			parent[pParent] = qParent;
 			size[qParent] += parent[pParent];
@@ -79,5 +80,4 @@ public class _547 {
 			return parent[p];
 		}
 	}
-
 }
